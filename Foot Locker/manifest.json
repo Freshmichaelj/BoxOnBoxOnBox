@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "FootLocker Sniper | iWang815",
+  "version": "1.0",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.footlocker.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

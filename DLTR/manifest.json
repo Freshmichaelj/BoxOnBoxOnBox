@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "DTLR AutoCart Bot",
+  "version": "1.0",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://www.dtlr.com/*"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.dtlr.com/products/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
